@@ -4,7 +4,7 @@ struct HeaderView: View {
     var body: some View {
         Group {
             Divider()
-            Text("Persistence Challenge")
+            Text("Protocols Challenge")
                 .frame(maxWidth: .infinity, alignment: .center)
                 .font(.title)
             Divider()

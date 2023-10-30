@@ -1,36 +1,55 @@
 import SwiftUI
 
 struct ContentView: View {
+    //MARK: Stretch #2 - Part II
+    
+    var coins = ["penny: 0.01 ","nickle: 0.05 ", "dime: 0.1 ","quarter: 0.25,"]
+    
+    
     var body: some View {
         HeaderView()
-        NavigationStack {
-            Text("User Defaults")
-                .font(.largeTitle)
-            HStack(spacing: 50) {
-                NavigationLink { 
-                    SaveView()
-                } label: { 
-                    VStack {
-                        Image(systemName: "square.and.arrow.down.fill")
-                            .font(.system(size: 100))
-                        Text("In")
-                            .font(.largeTitle)
-                    }
-                }
-
-                NavigationLink { 
-                    RetrieveView()
-                } label: { 
-                    VStack {
-                        Image(systemName: "square.and.arrow.up.fill")
-                            .font(.system(size: 100))
-                        Text("Out")
-                            .font(.largeTitle)
-                    }
-                }
-            }
-        }
-        .foregroundColor(.blue)
+        Spacer()
+        Text("MVP Works")
+           
+        //MARK: MVP - Part II
+            
+            .modifier(BoldTextModifier())
+        
+        
+        
+        //MARK: Stretch #1 - Part II
+            
+        MyMapV()
+                       .frame(width: 300, height: 200)
+        
+        
+        
+        //MARK: Stretch #2 - Part III
+     //   struct CoinListView:UICollectionViewLayout
+    //    {
+            
+//            let coins: [Coin]
+//
+//            var body: some View {
+//                List(coins) { coin in
+//                    CoinRow(coin: coin)
+//                }
+//            }
+//        }
+//        
+        
+        
+        
+        //MARK: Stretch #3 - Part II
+       
+        
+        Trapezoid()
+                        .fill(Color.blue)
+                        .frame(width: 200, height: 150) // Adjust the size as needed
+                        .padding()
+        
+        
+        Spacer()
         FooterView()
     }
 }
